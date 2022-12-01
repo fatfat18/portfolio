@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Patrick Pahunang Portfolio</title>
+<title>Portfolio</title>
 
 
 <style>
@@ -19,9 +19,10 @@
         margin: 0px;
         border: 0px;
         padding: 0px;
-        background-color: #f7ddce;
+        background-color: #e7cab0;
         background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
+        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+        overflow:hidden;
        
     }
 
@@ -30,54 +31,71 @@
     }
 
     canvas {
-        margin-top:100px;
+      
         position: fixed;
         width: 100%;
         height: relative;
       
     } 
 
-    .mainpage{
+    /* .mainpage{
         margin: 0px;
         border: 0px;
         padding: 0px;
-        /* background-color: blanchedalmond; */
+        background-color: blanchedalmond;
         height: 500px;
         width: 100%;
      
         
-    }
+    } */
 
     .navbar {
-        background-color: rgb(0, 0, 0); 
-        height: 9vh;
+        background: rgba(255,255,255,0);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0);
+        height: 8vh;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content:center;
         align-items: center;
-        gap: 10px;
+
+        
     }
     .links {
-        height: 9vh;
-        width: 200px;
+        height: 8vh;
+        width: 180px;
         /* background-color: chartreuse; */
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
         font-size: 25px;
-        color: white;
+        color: black;
         font-family: century gothic;
         font-weight: 500px;
+        transition: .3s;
+      
      
         
     }
 
 
     .links:hover {
-      background-color: #f8ebdf;
-      color: black;
+     
+      transform: scale(1.5);
+      letter-spacing: 1px;
+    
     }
+
+    .links:active {
+     
+     transform: scale(1);
+     letter-spacing: 1px;
+   }
+
+
+
 
     .contents {
         /* background-color: rgb(192, 134, 127); */
@@ -104,8 +122,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: 1.5s ease-out 0s 1 slideInFromLeft;
-        margin-left: -300px;
+        animation: 1.2s ease-out 0s  slideInFromLeft;
+        margin-left: -200px;
+        margin-top: 50px;
         
     }
 
@@ -114,7 +133,7 @@
 
 
     .displaypicture img {
-      transform: scale(.520);
+      transform: scale(.600);
 
     }
 
@@ -129,9 +148,9 @@
         align-items: center;
         font-family: century gothic;
         font-size: 40px;
-        font-weight: 1000;
-        margin-left: 300px;
+        margin-left: 200px;
         letter-spacing: 1px;
+        color: black;
        
     }
 
@@ -184,7 +203,7 @@
  .  *  move your mouse to over the stars   .
  *  .  .   change these values:   .  *
    .      * .        .          * .       */
-const STAR_COLOR = '#000000';
+const STAR_COLOR = '#fff';
 const STAR_SIZE = 3;
 const STAR_MIN_SCALE = 0.2;
 const OVERFLOW_THRESHOLD = 50;
@@ -446,12 +465,13 @@ function onMouseLeave() {
         <div class="contents">
 
             <div class="info">
-        
-              <h4>
-                Hi! 👋 <br/>It's me John Patrick Pahunang <br>I am your</h4>  
+              <p style="margin-bottom: -150px; color: blace; ">Hi! 👋 It's me</p>
+              <p style="font-size: 60px; font-weight: 1000; letter-spacing: 1px;">
+                 <br/>John Patrick Pahunang<br>
+              </p>  
                 
-                <h2 style="margin-top: -50px;"><span id="typewriter"></span><span id="cursor">|</span>
-                </h2>
+                <p style="margin-top: -70px;"><span id="typewriter" style="font-size: 33px; font-weight:100;"></span><span id="cursor">|</span>
+                </p>
              <script>
      
      function sleep(ms) {
@@ -459,7 +479,7 @@ function onMouseLeave() {
      }
 
 
-     const phrases = ["Front End Developer","Virtual Assistant","Food Buddy"];
+     const phrases = ["Web Front End Developer","Virtual Assistant"];
      const el = document.getElementById("typewriter")
 
      let sleepTime = 50;
