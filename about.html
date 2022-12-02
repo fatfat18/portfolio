@@ -73,7 +73,7 @@
         color: black;
         font-family: century gothic;
         font-weight: 600;
-        transition: .15s;
+        transition: .1s;
       
      
         
@@ -108,12 +108,12 @@
 
     .aboutinfo {
 
-        width: 35%;
+        width: 40%;
         height: 80%;
-        background: rgba(255,255,255,0.7);
+        background: rgba(255,255,255,0.5);
         -webkit-backdrop-filter: blur(1px);
         backdrop-filter: blur(1px);
-        border: 1px solid rgba(255,255,255,0.35);
+        border: 1px solid rgba(255,255,255,0.25);
         z-index: 100;
         border-radius: 10px;
         display: flex;
@@ -173,6 +173,7 @@
         box-shadow: 1px 1px 5px grey;
         padding-right: 15px;
         padding-left: 10px;
+       
 
     }
 
@@ -180,12 +181,23 @@
         height: 50px;
         width: 50px;
         object-fit: cover;
+        
     }
   
 
     .aboutinfodetails p {
         margin-left: 20px;
         font-size: 18px;
+    }
+
+    #first {
+      animation: aboutinfoanimation .7s ;
+    }
+    #second {
+      animation: aboutinfoanimation .9s ;
+    }
+    #third {
+      animation: aboutinfoanimation 1.1s ;
     }
   
 
@@ -484,19 +496,19 @@ function onMouseLeave() {
 
                     </div>
 
-                    <div class="aboutinfodetails">
-                        <img src="img/age.png"> <p>21 Years Old</p> 
+                    <div class="aboutinfodetails" id="first">
+                        <img src="img/age.png" > <p>21 Years Old</p> 
 
                     </div>
 
-                    <div class="aboutinfodetails">
+                    <div class="aboutinfodetails" id="second">
 
-                        <img src="img/location.png"> <p>Cagayan de Oro</p> 
+                        <img src="img/location.png" > <p>Cagayan de Oro</p> 
 
 
                     </div>
 
-                    <div class="aboutinfodetails">
+                    <div class="aboutinfodetails" id="third">
                         <img src="img/grad.png"> <p>University of Science and Technology of Southern Philippines</p> 
 
                     </div>
