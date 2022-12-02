@@ -64,7 +64,7 @@
     }
     .links {
         height: 8vh;
-        width: 180px;
+        width: 150px;
         /* background-color: chartreuse; */
         display: flex;
         justify-content: center;
@@ -74,7 +74,7 @@
         color: black;
         font-family: century gothic;
         font-weight: 600;
-        transition: .3s;
+        transition: .25s;
       
      
         
@@ -105,13 +105,15 @@
     }
 
 
-    @keyframes slideInFromLeft {
+    @keyframes popuppic {
       0% {
-        transform: scale(0);
+        transform: translateY(200px);
+
       
       }
       100% {
-        transform: scale(1);
+        transform: translateY(0);
+       
       }
 }
 
@@ -122,15 +124,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: 1.2s ease-out 0s  slideInFromLeft;
+        animation: .6s ease-in popuppic;
         margin-left: -200px;
         margin-top: 50px;
         
     }
 
 
-    
-
+  
 
     .displaypicture img {
       transform: scale(.600);
@@ -174,11 +175,11 @@
     @keyframes handwave {
 
       0% { transform: rotate( 0.0deg) }
-      10% { transform: rotate(14.0deg) } 
-      20% { transform: rotate(-8.0deg) }
-      30% { transform: rotate(14.0deg) }
-      40% { transform: rotate(-4.0deg) }
-      50% { transform: rotate(10.0deg) }
+      10% { transform: rotate(19.0deg) } 
+      20% { transform: rotate(-13.0deg) }
+      30% { transform: rotate(19.0deg) }
+      40% { transform: rotate(-9.0deg) }
+      50% { transform: rotate(15.0deg) }
       60% { transform: rotate( 0.0deg) }
 
     }
@@ -501,7 +502,7 @@ function onMouseLeave() {
                  <br/>John Patrick Pahunang<br>
               </p>  
                 
-                <p style="margin-top: -70px;"><span id="typewriter" style="font-size: 33px; font-weight:100;"></span><span id="cursor">|</span>
+                <p style="margin-top: -70px;"><span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span>
                 </p>
              <script>
      
