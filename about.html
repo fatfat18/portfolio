@@ -101,114 +101,93 @@
         height: 90vh;
         width: 100%;
         display: flex;
-    }
-
-
-    @keyframes popuppic {
-      0% {
-        transform: translateY(200px);
-
-      
-      }
-      100% {
-        transform: translateY(0);
-       
-      }
-}
-
-    .displaypicture {
-        /* background-color: rgb(72, 41, 145); */
-        height: 90vh;
-        width: 40%;
-        display: flex;
         justify-content: center;
         align-items: center;
-        animation: .6s ease-in popuppic;
-        margin-left: -200px;
-        margin-top: 50px;
-        
     }
 
 
-  
+    .aboutinfo {
 
-    .displaypicture img {
-      transform: scale(.600);
-
-    }
-
-
-    .info {
-        /* background-color: rgba(80, 18, 72); */
-        height: 90vh;
-        width: 50%;
+        width: 35%;
+        height: 80%;
+        background: rgba(255,255,255,0.7);
+        -webkit-backdrop-filter: blur(1px);
+        backdrop-filter: blur(1px);
+        border: 1px solid rgba(255,255,255,0.35);
+        z-index: 100;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: century gothic;
-        font-size: 40px;
-        margin-left: 200px;
-        letter-spacing: 1px;
-        color: black;
-       
+        animation: aboutinfoanimation 1s;
+        box-shadow: 10px 10px 50px grey;
+
+        
     }
 
 
-    .wave {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      z-index: 100;
-      position: absolute;
-      margin-left: -45px;
-      
+    @keyframes aboutinfoanimation {
+
+        0%{
+            transform: scale(0);
+        }
+
+        100%{
+            transform: scale(1);
+        }
+    }
+
+
+
+    .aboutinfoimage{
   
-    }
-
-    .wave:hover{
-
-      animation: handwave 1s infinite;
-    }
-
-    @keyframes handwave {
-
-      0% { transform: rotate( 0.0deg) }
-      10% { transform: rotate(19.0deg) } 
-      20% { transform: rotate(-13.0deg) }
-      30% { transform: rotate(19.0deg) }
-      40% { transform: rotate(-9.0deg) }
-      50% { transform: rotate(15.0deg) }
-      60% { transform: rotate( 0.0deg) }
+        width: 150px; 
+        height:150px;
+        object-fit: cover; 
+        border-radius: 100px;
+        z-index: 100;
+        transition: 1s;
 
     }
 
+  
 
-
-
-
-    #typewriter {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+    .aboutinfoimage:hover{
+        width: 200px; 
+        height:200px;  
+        border-radius: 10px; 
     }
 
+    .aboutinfodetails{
+        width: 70%;
+        height:80px;
+        background-color:white;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-family: century gothic;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px grey;
+        padding-right: 15px;
+        padding-left: 10px;
 
-    #cursor {
-        color: rgb(0, 0, 0);
-        animation: blink .5s linear infinite;
     }
 
-
-    @keyframes blink {
-    
-        0% {
-            opacity: 100%;
-        }
-        50% {
-            opacity: 0%;
-        }
+    .aboutinfodetails img {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
     }
+  
 
+    .aboutinfodetails p {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+  
 
 
 
@@ -495,69 +474,38 @@ function onMouseLeave() {
 
         <div class="contents">
 
-            <div class="info">
-              <p style="margin-bottom: -150px; color: blace;">Hi &nbsp&nbsp&nbsp<img src="img/wave.png" class="wave"> I am</p>
-              <p style="font-size: 60px; font-weight: 1000; letter-spacing: 1px;">
-                 <br/>John Patrick Pahunang<br>
-              </p>  
-                
-                <p style="margin-top: -70px;"><span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span>
-                </p>
-             <script>
-     
-     function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-     }
 
 
-     const phrases = ["Web Front End Developer","Virtual Assistant"];
-     const el = document.getElementById("typewriter")
+            <div class="aboutinfo"> 
 
-     let sleepTime = 50;
+                    <img src="img/2X2.png" class="aboutinfoimage">
+                    <div class="aboutinfodetails" style="justify-content: center; align-items:center; background-color:transparent; font-size: 30px; border: 0px; box-shadow: 0px 0px 0px ">
+                        John Patrick Pahunang
 
-     let curPhraseIndex = 0;
+                    </div>
 
-     const writeLoop = async () => {
-        while(true) {
-            let curWord = phrases[curPhraseIndex];
+                    <div class="aboutinfodetails">
+                        <img src="img/age.png"> <p>21 Years Old</p> 
+
+                    </div>
+
+                    <div class="aboutinfodetails">
+
+                        <img src="img/location.png"> <p>Cagayan de Oro</p> 
 
 
-        for (let i=0; i<curWord.length;i++){
-            el.innerText = curWord.substring(0,i+1);
-            await sleep(sleepTime);
-        }
+                    </div>
 
+                    <div class="aboutinfodetails">
+                        <img src="img/grad.png"> <p>University of Science and Technology of Southern Philippines</p> 
 
-        await sleep(sleepTime * 10);
+                    </div>
 
-        for (let i= curWord.length; i>0;i--){
-            el.innerText = curWord.substring(0,i-1);
-            await sleep(sleepTime);
-        }
-
-        await sleep(sleepTime * 5);
-
-        if (curPhraseIndex === phrases.length-1) {
-            curPhraseIndex =0;
-        }else {
-            curPhraseIndex++;
-        }
-     }
-
-    };
-
-    writeLoop();
-
-            </script>
-                     
             </div>
 
+           
 
 
-
-            <div class="displaypicture">
-                <img src="img/DP.png">
-            </div>
 
         </div>
 
