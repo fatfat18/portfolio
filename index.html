@@ -4,6 +4,7 @@
 <head>
 
 <title>My Portfolio</title>
+<link rel="icon" href="img/FINALLOGO.png" type="image/icon type" style="object-fit:cover">
 
 
 <style>
@@ -50,30 +51,57 @@
     } */
 
     .navbar {
-        background: rgba(255,255,255,0);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        background: black;
+        -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(0px);
         border: 1px solid rgba(255,255,255,0);
-        height: 8vh;
+        height: 10vh;
         width: 100%;
         display: flex;
-        justify-content:center;
-        align-items: center;
 
-        
+      
+       
     }
-    .links {
-        height: 8vh;
-        width: 150px;
-        /* background-color: chartreuse; */
+
+    .navbarlogo {
+
+        width: 8%;
+        height: 10vh;
+    
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 20px;
-        color: black;
+
+    }
+
+    .navbarlogo img {
+      height: 40px;
+      width: 50px;
+     
+    }
+    
+    .linkscontainer {
+        width: 100%;
+        height: relative;
+        /* background-color: rgb(145, 28, 28); */
+        display: flex;
+        justify-content: end;
+        margin-right: 50px;
+    }
+    
+    .links {
+        height: 10vh;
+        width: 110px;
+        /* background-color: chartreuse;  */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        color: white;
         font-family: century gothic;
-        font-weight: 600;
+        letter-spacing: 1px;
         transition: .1s;
+  
       
      
         
@@ -81,16 +109,18 @@
 
 
     .links:hover {
+
+      text-shadow: 3px 3px 10px white;
+      transform: scale(1.2);
      
-      transform: scale(1.5);
-      letter-spacing: 1px;
-    
+   
+   
     }
 
     .links:active {
-     
-     transform: scale(1.5);
-     letter-spacing: 1px;
+
+     transform: scale(1);
+
    }
 
 
@@ -462,8 +492,14 @@ function onMouseLeave() {
 
 
 
-
         <div class="navbar">
+          
+          <div class="navbarlogo">
+            <a href="index.html"><img src="img/FINALLOGO.png"></a>
+          </div>
+
+
+          <div class="linkscontainer">
 
             <a href="index.html"><div class="links">
                 Home
@@ -480,11 +516,10 @@ function onMouseLeave() {
             <a href=""> <div class="links">
                Projects
             </div></a>
-           
-
-
 
         </div>
+
+      </div>
         
 
 
