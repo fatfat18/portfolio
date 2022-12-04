@@ -136,14 +136,17 @@
 
     @keyframes popuppic {
       0% {
-        transform: translateY(200px);
+        transform:translateY(200px)
+  
+      }
+
+      100% {
+        transform:translateY(0px)
+    
+      }
+
 
       
-      }
-      100% {
-        transform: translateY(0);
-       
-      }
 }
 
     .displaypicture {
@@ -153,7 +156,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: .6s ease-in popuppic;
+        animation: 1s popuppic;
         margin-left: -200px;
         margin-top: 50px;
         
