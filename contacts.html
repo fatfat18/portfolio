@@ -139,15 +139,11 @@
     .aboutinfo {
 
         width: 40%;
-        height: 90%;
+        height: 50%;
         background: white;
         border: solid 1px black;
         z-index: 100;
         border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         animation: aboutinfoanimation .7s;
         box-shadow: 10px 10px 50px grey;
 
@@ -181,10 +177,10 @@
         border: solid 2px black;
         position:absolute;
         margin-bottom: 50px;
-      
+        
+  
 
     }
-
 
   
 
@@ -196,19 +192,20 @@
     }
 
     .aboutinfodetails{
-        width: 100%;
-        height:100px;
+        width: 350px;
+        height:70px;
         background-color:white;
         margin-top: 10px;
         display: flex;
         align-items: center;
-        padding-left: 20px;
         font-family: century gothic;
         letter-spacing: 1px;
         border-radius: 10px;
         box-shadow: 1px 1px 5px grey;
-        padding-right: 20px;
-        margin-right: 20px;
+        padding-left: 10px;
+        
+    
+
         
  
 
@@ -225,9 +222,8 @@
   
 
     .aboutinfodetails p {
-        margin-left: 15px;
-        font-size: 13px;
-     
+        padding-left: 7px;
+        font-size: 14px;
     }
 
     #first {
@@ -244,55 +240,117 @@
     }
   
 
-    .aboutinfodetailscontainer {
-      width: 80%;
-      height: 300px;
-      /* background-color: aqua; */
-      display: flex;
-      margin-top: 50px;
- 
 
-    }
+   
 
-    .aboutinfodetailscontainer2 {
-      width: 80%;
-      height: 350px;
-      /* background-color: rgb(32, 58, 58); */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
- 
-
-    }
-
-    .aboutinfodesc{
-      width: 100%;
-      height: 320px;
-      background-color:white;
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      padding-left: 40px;
-      font-family: century gothic;
-      letter-spacing: 1px;
-      border-radius: 10px;
-      box-shadow: 1px 1px 5px grey;
-      padding-right: 40px;
-
-    }
     .aboutinfoimagename {
       width: 100%;
-      height: 250px;
-      /* background-color: black; */
+      height: 35%;
+       /* background-color: black;  */
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      padding-top: 30px;
       align-items: center;
-      margin-bottom: -30px;
-      
 
-     
+      
+    }
+
+    .contactinfocontainer {
+        width: 100%;
+        height: 150px;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactinfo {
+        display: flex;
+        gap: 20px;
+    }
+    .contactinfo p {
+        font-weight: 1000;
+    }
+    .contactinfo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .contactinfolinkscontainer{
+        height: 150px;
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactinfolinks{
+        height: 100px;
+        width: 70px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: linkss 1s;
+        
+        
+  
+    }
+
+   
+    .contactinfolinks img {
+        width: 70px;
+        height: 70px;
+       object-fit: contain;
+       transition: .3s;
+       
+       
+    }
+
+    .contactinfolinks img:hover{
+        width: 120px;
+        height: 120px;
+    }  
+
+    .contactinfolinkslinkedin{
+        height: 100px;
+        width: 70px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: linkss 1s;
+
+    }
+
+    .contactinfolinkslinkedin img{
+        width: 40px;
+        object-fit: contain;
+        transition: .3s;
+    }
+    .contactinfolinkslinkedin img:hover {
+        width: 70px;
+        height: 70px;
+    }  
+    
+
+    
+
+    
+
+    @keyframes linkss {
+
+        0% {
+            transform: translateY(200px);
+        }
+
+        100%{
+            transform: translateY(0px)
+        }
     }
 
 
@@ -591,49 +649,46 @@ function onMouseLeave() {
 
               <div class="aboutinfoimagename">
                 <img src="img/2X2.png" class="aboutinfoimage">
-                <p style="font-size:30px;font-family: century gothic; text-align: center; padding-top: 150px;margin-bottom: -30px; font-weight: 1000; ">
-                  John Patrick Pahunang
-                </p>
+               
                 </div>
 
-
-                <div class="aboutinfodetailscontainer">
-                  <div class="aboutinfodetailscontainer2">
-                    <div class="aboutinfodetails" id="first">
-                        <img src="img/age.png" > <p>21 Years Old</p> 
-
-                    </div>
-
-                    <div class="aboutinfodetails" id="second">
-
-                        <img src="img/location.png" > <p>Cagayan de Oro</p> 
-
-
-                    </div>
-
-                    <div class="aboutinfodetails" id="third">
-                        <img src="img/grad.png"> <p>University of Science and Technology of Southern Philippines</p> 
-
-                    </div>
+                <div class="contactinfocontainer"> 
                   
 
+                    <div class="contactinfo">
+                        <div class="aboutinfodetails" id="first">
+                           <img src="img/email.png"> <p>patrickpahunang452@gmail.com</p> 
+                        </div>
+                        <div class="aboutinfodetails" id="second">
+                            <img src="img/phone.png"> <p>09354517426</p> 
+                        </div>
 
+                    </div>
 
-                  </div>
-                  <div class="aboutinfodesc" id="fourth">
-                    <p style="text-align:justify; font-size: 16px;">&nbsp&nbsp&nbsp&nbsp&nbspA 4th Year Bachelor of Science Information Technology
-                      Student at University of Science and Technology of
-                      Southern Philippines (USTP). I want to be part of your
-                      journey as a Virtual Assistant or an Entry Level Front End Web Developer to help you achieve your success and make your
-                      workload easier.
-                    </p>
-                    
-                 </div>
+                   
                 </div>
-                 
-            
 
 
+                <div class="contactinfolinkscontainer">
+                        
+                    <a href="https://www.facebook.com/patrick.pahunang" target="_blank" ><div class="contactinfolinks">
+                        <img src="img/fb.png">
+                    </div></a>
+                    
+                    <a href="https://github.com/patrickpahunang" target="_blank"><div class="contactinfolinks" >
+                        <img src="img/gh.png">
+                    </div></a>
+
+                    <a href="https://www.linkedin.com/in/john-patrick-pahunang-942044259/" target="_blank"><div class="contactinfolinkslinkedin">
+                        <img src="img/linkedin.png" >
+                    </div></a>
+
+                    <a href="https://www.upwork.com/freelancers/~01697e3c9ecd84b3af?viewMode=1" target="_blank"><div class="contactinfolinks" >
+                        <img src="img/upwork.png">
+                    </div></a>
+                    
+
+                </div>
 
             </div>
 
