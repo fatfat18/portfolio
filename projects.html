@@ -163,19 +163,27 @@
     .projectimage{
         height: 30%;
         width: 40%;
-        background-color: white;
+
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-
         z-index: 100;
     }
+
+    .projectimage img:hover{
+      transform: scale(1.4);
+      transition: .7s;
+      z-index: 400;
+    }
+
     .projectimage img{
         height: 95%;
         width: 95%;
-        border: solid 3px black;
+        border: solid 8px rgb(255, 255, 255);
+        border-radius: 5px;
         gap: 10px;
+        z-index: 1200;
     }
     .projecttitle p,h1,h2 {
         margin: 30px;
@@ -207,8 +215,6 @@
     #fourth{
       animation: projimg .7s;
     }
-
-    
 
     @keyframes projimg {
       0% {
