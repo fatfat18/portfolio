@@ -105,7 +105,7 @@ a {
 .landingpage {
 
    width: 100%;
-   height: 100vh;
+   height: 100%;
 
   
 
@@ -309,7 +309,7 @@ a {
 .aboutpage {
 background: url(/img/landingpage.jpg);
 width: 100%;
-height: 110vh;
+height: 100vh;
 display: flex;
 justify-content: center;
 
@@ -454,7 +454,7 @@ z-index: -100;
 .contactpage {
 
 width: 100%;
-height: 110vh;
+height: 100vh;
 background: url(/img/landingpage.jpg);
 background-repeat: no-repeat;
 background-size: cover;
@@ -484,7 +484,7 @@ flex-direction: column;
 
 .contactpagecontents {
    width: 55%;
-   height:58%;
+   height:63%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -587,14 +587,9 @@ flex-direction: column;
 
    }
 
-
-
-
-
 .socials{
    width: 100%;
-   height: 140px;
-
+   max-height: 140px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -617,7 +612,7 @@ flex-direction: column;
 
 
 .socialicons{
-   min-width:70%;
+   min-width:20vw;
    height:70px; 
    display: flex; 
    justify-content:space-evenly;
@@ -644,9 +639,18 @@ flex-direction: column;
 
 .socialicons span:hover{
    transform: scale(1.2);
-   border: solid 1px white;
+   background-color: white;
+   color: rgb(8, 11, 54); ;
    
    }
+
+
+
+
+
+
+
+
 
 
 
@@ -672,26 +676,85 @@ flex-direction: column;
 .projectpage {
 
 width: 100%;
-height: 110vh;
+height: 100vh;
 background: url(/img/projectbackground.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
 align-items: center;
 flex-direction: column;
-filter: blur(5px);
 }
 
 
 
+.projectpagetitle{
+   margin-top: 20px;
+   font-family: sans-serif;
+   width: 100%;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-size: clamp(1rem,2vw,2rem);
+   font-weight: 1000;
+}
 
 
+.projectpagesubtitle{
+   width: 100%;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-size: clamp(1rem,2vw,1.5rem);
+   font-weight:600;
+}
 
 
+.projectpagecardcontainer {
+   width: 100%;
+   height:80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap:wrap;
+   z-index: 400;
+   
+}
 
 
+.projectpagecards {
+   display: flex;
+   margin-left: 50px;
+   margin-right: 50px;
+   object-fit: cover;
+   transition: 1s;
+   z-index: 500;
 
 
+   
+   
+}
+
+.projectpagecards img {
+   width: 400px;
+   height: 250px;
+   border: solid 5px white;
+   border-radius: 10px;
+   z-index: 1200;
+   transition: .5s;
+   
+   
+}
+
+
+.projectpagecards img:hover{
+   transform: scale(1.5);
+   
+   
+}
 
 
 
@@ -918,6 +981,44 @@ filter: blur(5px);
 
 
       <div class="projectpage">
+
+
+         <div class="projectpagetitle">
+            Projects
+
+         </div>
+         <div class="projectpagesubtitle">
+            Capstone Project
+
+         </div>
+         <div class="projectpagecardcontainer">
+            
+            <div class="projectpagecards">
+           <img src="img/face recog.png" alt="facerecogimg">
+
+            </div>
+
+            <div class="projectpagecards">
+               <img src="img/projimg1.png" alt="projimg1">
+    
+            </div>
+
+            <div class="projectpagecards">
+               <img src="img/projimg2.png" alt="projimg2">
+    
+            </div>
+            <div class="projectpagecards">
+               <img src="img/projimg3.png" alt="projimg3">
+    
+            </div>
+            <div class="projectpagecards">
+               <img src="img/projimg4.png" alt="projimg4">
+    
+            </div>
+
+                
+
+         </div>
 
       </div>
 
