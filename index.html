@@ -16,7 +16,7 @@
       setTimeout(function () {
       document.getElementById("loadpage").style.display = "none";
       document.getElementById("container").style.display = "flex";
-   },2000);  /*change this to 2000 to display the loader after the development*/
+   },10);  /*change this to 2000 to display the loader after the development*/
    
    </script>
   
@@ -65,12 +65,45 @@
       <div class="aboutpage" id="aboutpage">
          <p class="aboutpagetitle">About</p>
 
+
+         <script>
+            window.onscroll = function() {
+              const div = document.querySelector("#aboutpageimage");
+              if (window.pageYOffset > 100) {
+               div.style.marginLeft = "3vw";
+              } else {
+               div.style.marginLeft = "0";
+              }
+
+              const div2 = document.querySelector("#aboutpagedetails");
+              if (window.pageYOffset > 100) {
+               div2.style.marginRight = "0";
+              } else {
+               div2.style.marginRight = "0";
+              }
+         
+
+             const div3 = document.querySelector("#contactpagecontents");
+               if (window.pageYOffset > 100) {
+                div3.style.marginTop = "0px";
+               } else {
+                div3.style.marginTop = "0px";
+               }
+               
+            
+          
+              
+            };
+              </script>
+
+
+
       <div class="aboutpagecontainer">
-         <div class="aboutpageimg">
+         <div class="aboutpageimg" id="aboutpageimage">
 
          </div>
 
-         <div class="aboutpagedetails">
+         <div class="aboutpagedetails" id="aboutpagedetails">
             <img src="img/aboutpagedetailsimg.jpg" alt="" class="card">
 
             <div class="aboutpagetitle1">
@@ -97,11 +130,16 @@
 
       </div>
 
+
+
+      <script src="/js/div.js"></script>
+
+
       
       <div class="contactpage">
          <p class="contactpagetitle">Contact</p><br>
 
-         <div class="contactpagecontents">
+         <div class="contactpagecontents" id="contactpagecontents">
 
             <div class="contactpagecontentsdetails">
 
