@@ -1,622 +1,202 @@
 <!DOCTYPE html>
-
-
+<html lang="en">
 <head>
-
-<title>My Portfolio</title>
-<link rel="icon" href="img/FINALLOGO.png" type="image/icon type" style="object-fit:cover">
-
-
-<style>
-  html{line-height:1.15;-webkit-text-size-adjust:100%}
-  
-            body{margin:0}
-            a{background-color:transparent}[hidden]
-            {display:none}
-            html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}
-            
-
-    body {
-        margin: 0px;
-        border: 0px;
-        padding: 0px;
-        background-color: #e7cab0;
-        background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
-        overflow:hidden;
-       
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    canvas {
-      
-        position: fixed;
-        width: 100%;
-        height: relative;
-      
-    } 
-
-    /* .mainpage{
-        margin: 0px;
-        border: 0px;
-        padding: 0px;
-        background-color: blanchedalmond;
-        height: 500px;
-        width: 100%;
-     
-        
-    } */
-
-    .navbar {
-        background: black;
-        -webkit-backdrop-filter: blur(100px);
-        backdrop-filter: blur(0px);
-        border: 1px solid rgba(255,255,255,0);
-        height: 10vh;
-        width: 100%;
-        display: flex;
-    
-
-      
-       
-    }
-
-    .navbarlogo {
-
-        width: 8%;
-        height: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .navbarlogo img {
-      height: 40px;
-      width: 50px;
-     
-    }
-    
-    .linkscontainer {
-        width: 100%;
-        height: relative;
-        /* background-color: rgb(145, 28, 28); */
-        display: flex;
-        justify-content: end;
-        margin-right: 50px;
-    }
-    
-    .links {
-        height: 10vh;
-        width: 150px;
-        /* background-color: chartreuse;  */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        color: white;
-        font-family: century gothic;
-        letter-spacing: 1px;
-        transition: .1s;
-  
-      
-     
-        
-    }
-
-
-    .links:hover {
-
-      text-shadow: 3px 3px 10px white;
-      transform: scale(1.2);
-     
-   
-   
-    }
-
-    .links:active {
-
-     transform: scale(1);
-
-   }
-
-
-
-
-    .contents {
-        /* background-color: rgb(192, 134, 127); */
-        height: 90vh;
-        width: 100%;
-        display: flex;
-    }
-
-
-    @keyframes popuppic {
-      0% {
-        transform:translateY(200px)
-  
-      }
-
-      100% {
-        transform:translateY(0px)
-    
-      }
-
-
-      
-}
-
-    .displaypicture {
-        /* background-color: rgb(72, 41, 145); */
-        height: 90vh;
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: 1s popuppic;
-        margin-left: -200px;
-        margin-top: 50px;
-        
-    }
-
-
-  
-
-    .displaypicture img {
-      transform: scale(.600);
-
-    }
-
-
-    .info {
-        /* background-color: rgba(80, 18, 72); */
-        height: 90vh;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: century gothic;
-        font-size: 40px;
-        margin-left: 200px;
-        letter-spacing: 1px;
-        color: black;
-       
-    }
-
-
-    .wave {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      z-index: 100;
-      position: absolute;
-      margin-left: -45px;
-      
-  
-    }
-
-    .wave:hover{
-
-      animation: handwave 1s infinite;
-    }
-
-    @keyframes handwave {
-
-      0% { transform: rotate( 0.0deg) }
-      10% { transform: rotate(19.0deg) } 
-      20% { transform: rotate(-13.0deg) }
-      30% { transform: rotate(19.0deg) }
-      40% { transform: rotate(-9.0deg) }
-      50% { transform: rotate(15.0deg) }
-      60% { transform: rotate( 0.0deg) }
-
-    }
-
-
-
-
-
-    #typewriter {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    }
-
-
-    #cursor {
-        color: rgb(0, 0, 0);
-        animation: blink .5s linear infinite;
-    }
-
-
-    @keyframes blink {
-    
-        0% {
-            opacity: 100%;
-        }
-        50% {
-            opacity: 0%;
-        }
-    }
-
-
-
-
-
-
-    
-
-</style>
-
-
-
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="img/FINALLOGO.png" type="image/icon type" style="object-fit:cover">
+   <link rel="stylesheet" href="fa/css/all.css">
+   <link rel="stylesheet" href="index.css">
+	<title>John Patrick Pahunang</title>
 </head>
-
 <body>
+	
+
+   <script>
+      setTimeout(function () {
+      document.getElementById("loadpage").style.display = "none";
+      document.getElementById("container").style.display = "flex";
+   },1);  /*change this to 2000 to display the loader after the development*/
    
-
-
-    <div class="canvas">
-        <canvas></canvas>
-       <script>
-        /*          *     .        *  .    *    *   . 
- .  *  move your mouse to over the stars   .
- *  .  .   change these values:   .  *
-   .      * .        .          * .       */
-const STAR_COLOR = '#fff';
-const STAR_SIZE = 3;
-const STAR_MIN_SCALE = 0.2;
-const OVERFLOW_THRESHOLD = 50;
-const STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8;
-
-const canvas = document.querySelector( 'canvas' ),
-      context = canvas.getContext( '2d' );
-
-let scale = 1, // device pixel ratio
-    width,
-    height;
-
-let stars = [];
-
-let pointerX,
-    pointerY;
-
-let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
-
-let touchInput = false;
-
-generate();
-resize();
-step();
-
-window.onresize = resize;
-canvas.onmousemove = onMouseMove;
-canvas.ontouchmove = onTouchMove;
-canvas.ontouchend = onMouseLeave;
-document.onmouseleave = onMouseLeave;
-
-function generate() {
-
-   for( let i = 0; i < STAR_COUNT; i++ ) {
-    stars.push({
-      x: 0,
-      y: 0,
-      z: STAR_MIN_SCALE + Math.random() * ( 1 - STAR_MIN_SCALE )
-    });
-   }
-
-}
-
-function placeStar( star ) {
-
-  star.x = Math.random() * width;
-  star.y = Math.random() * height;
-
-}
-
-function recycleStar( star ) {
-
-  let direction = 'z';
-
-  let vx = Math.abs( velocity.x ),
-	    vy = Math.abs( velocity.y );
-
-  if( vx > 1 || vy > 1 ) {
-    let axis;
-
-    if( vx > vy ) {
-      axis = Math.random() < vx / ( vx + vy ) ? 'h' : 'v';
-    }
-    else {
-      axis = Math.random() < vy / ( vx + vy ) ? 'v' : 'h';
-    }
-
-    if( axis === 'h' ) {
-      direction = velocity.x > 0 ? 'l' : 'r';
-    }
+   </script>
   
-    else {
-      direction = velocity.y > 0 ? 't' : 'b';
-    }
-  }
-  
-  star.z = STAR_MIN_SCALE + Math.random() * ( 1 - STAR_MIN_SCALE );
-
-  if( direction === 'z' ) {
-    star.z = 0.1;
-    star.x = Math.random() * width;
-    star.y = Math.random() * height;
-  }
-  else if( direction === 'l' ) {
-    star.x = -OVERFLOW_THRESHOLD;
-    star.y = height * Math.random();
-  }
-  else if( direction === 'r' ) {
-    star.x = width + OVERFLOW_THRESHOLD;
-    star.y = height * Math.random();
-  }
-  else if( direction === 't' ) {
-    star.x = width * Math.random();
-    star.y = -OVERFLOW_THRESHOLD;
-  }
-  else if( direction === 'b' ) {
-    star.x = width * Math.random();
-    star.y = height + OVERFLOW_THRESHOLD;
-  }
-
-}
-
-function resize() {
-
-  scale = window.devicePixelRatio || 1;
-
-  width = window.innerWidth * scale;
-  height = window.innerHeight * scale;
-
-  canvas.width = width;
-  canvas.height = height;
-
-  stars.forEach( placeStar );
-
-}
-
-function step() {
-
-  context.clearRect( 0, 0, width, height );
-
-  update();
-  render();
-
-  requestAnimationFrame( step );
-
-}
-
-function update() {
-
-  velocity.tx *= 0.96;
-  velocity.ty *= 0.96;
-
-  velocity.x += ( velocity.tx - velocity.x ) * 0.8;
-  velocity.y += ( velocity.ty - velocity.y ) * 0.8;
-
-  stars.forEach( ( star ) => {
-
-    star.x += velocity.x * star.z;
-    star.y += velocity.y * star.z;
-
-    star.x += ( star.x - width/2 ) * velocity.z * star.z;
-    star.y += ( star.y - height/2 ) * velocity.z * star.z;
-    star.z += velocity.z;
-  
-    // recycle when out of bounds
-    if( star.x < -OVERFLOW_THRESHOLD || star.x > width + OVERFLOW_THRESHOLD || star.y < -OVERFLOW_THRESHOLD || star.y > height + OVERFLOW_THRESHOLD ) {
-      recycleStar( star );
-    }
-
-  } );
-
-}
-
-function render() {
-
-  stars.forEach( ( star ) => {
-
-    context.beginPath();
-    context.lineCap = 'round';
-    context.lineWidth = STAR_SIZE * star.z * scale;
-    context.globalAlpha = 0.5 + 0.5*Math.random();
-    context.strokeStyle = STAR_COLOR;
-
-    context.beginPath();
-    context.moveTo( star.x, star.y );
-
-    var tailX = velocity.x * 2,
-        tailY = velocity.y * 2;
-
-    // stroke() wont work on an invisible line
-    if( Math.abs( tailX ) < 0.1 ) tailX = 0.5;
-    if( Math.abs( tailY ) < 0.1 ) tailY = 0.5;
-
-    context.lineTo( star.x + tailX, star.y + tailY );
-
-    context.stroke();
-
-  } );
-
-}
-
-function movePointer( x, y ) {
-
-  if( typeof pointerX === 'number' && typeof pointerY === 'number' ) {
-
-    let ox = x - pointerX,
-        oy = y - pointerY;
-
-    velocity.tx = velocity.tx + ( ox / 8*scale ) * ( touchInput ? 1 : -1 );
-    velocity.ty = velocity.ty + ( oy / 8*scale ) * ( touchInput ? 1 : -1 );
-
-  }
-
-  pointerX = x;
-  pointerY = y;
-
-}
-
-function onMouseMove( event ) {
-
-  touchInput = false;
-
-  movePointer( event.clientX, event.clientY );
-
-}
-
-function onTouchMove( event ) {
-
-  touchInput = true;
-
-  movePointer( event.touches[0].clientX, event.touches[0].clientY, true );
-
-  event.preventDefault();
-
-}
-
-function onMouseLeave() {
-
-  pointerX = null;
-  pointerY = null;
-
-}
-
-        </script>
+ <div class="loadpage" id="loadpage">
+   <p>PORTFOLIO<br>
+   </p>
+  </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
 
+	<div class="container"  id="container" >
 
-        <div class="navbar">
-          
-          <div class="navbarlogo">
-            <a href="index.html"><img src="img/FINALLOGO.png"></a>
-          </div>
+      <div class="landingpage" id="landingpage">
+         <div class="navbar">
+            J O H N &nbsp P A T R I C K   <span>P A H U N A N G</span>
 
+         </div>
+         <div class="landingpagebackground">
 
-          <div class="linkscontainer">
+        
+            <video autoplay muted loop >
+               <source src=/img/cover_Trim.mp4 type="video/mp4">
 
-            <a href="index.html"><div class="links">
-                HOME
-            </div></a>
+            </video>
 
-            <a href="about.html"> <div class="links">
-                ABOUT
-            </div></a>
+            <div class="landingpagecontent">
+            
+               <div class="landingpagetitle">
+              <p id="lpt1">WEB FRONT-END DEVELOPER</p>
+              <i class="fa-solid fa-code" style="font-size:30px;" id="lpt2"></i> 
+              <p id="lpt3">VIRTUAL ASSISTANT</p> 
+             
+               </div>
+              <div class="buttondown">
+                 <span class="fa-solid fa-angles-down"></span>
+               </div>
+            </div>
 
-            <a href="contacts.html"> <div class="links">
-                CONTACT
-            </div></a>
-
-            <a href="projects.html"> <div class="links">
-               PROJECTS
-            </div></a>
-
-        </div>
+            
+         </div>
 
       </div>
-        
 
 
+      <div class="aboutpage" id="aboutpage">
+         <p class="aboutpagetitle">About</p>
 
+      <div class="aboutpagecontainer">
+         <div class="aboutpageimg">
 
+         </div>
 
+         <div class="aboutpagedetails">
+            <img src="img/aboutpagedetailsimg.jpg" alt="" class="card">
 
+            <div class="aboutpagetitle1">
 
-        <div class="contents">
+              A 4th Year Bachelor of Science Information Technology Student. I want to be part of your journey as a <span> Virtual Assistant</span> or an <span>Entry Level Front End Web Developer</span> to grow, gain some knowledge and experience and be part of your success by making my services an asset to your company and does everything to make your workload easier.
+           
+            </div>
+            <div class="aboutpagetitle2">
 
-            <div class="info">
-              <p style="margin-bottom: -150px; color: blace;">Hi &nbsp&nbsp&nbsp<img src="img/wave.png" class="wave"> I am</p>
-              <p style="font-size: 60px; font-weight: 1000; letter-spacing: 1px;">
-                 <br/>John Patrick Pahunang<br>
-              </p>  
-                
-                <p style="margin-top: -70px;"><span id="typewriter" style="font-size: 32px; font-weight:100;"></span><span id="cursor">|</span>
-                </p>
-             <script>
-     
-     function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-     }
+               <div class="aboutpagetitle2contents">
+                  <i class="fa-solid fa-house"></i>&nbsp&nbspCagayan de Oro City Misamis Oriental Philippines
+               </div>
+               
+               
+               <div class="aboutpagetitle2contents">
+                  <i class="fa-solid fa-graduation-cap"></i> &nbsp&nbspUniversity of Science and Technology of the Philippines
+               </div>
 
-
-     const phrases = ["Web Front End Developer","Virtual Assistant"];
-     const el = document.getElementById("typewriter")
-
-     let sleepTime = 50;
-
-     let curPhraseIndex = 0;
-
-     const writeLoop = async () => {
-        while(true) {
-            let curWord = phrases[curPhraseIndex];
-
-
-        for (let i=0; i<curWord.length;i++){
-            el.innerText = curWord.substring(0,i+1);
-            await sleep(sleepTime);
-        }
-
-
-        await sleep(sleepTime * 10);
-
-        for (let i= curWord.length; i>0;i--){
-            el.innerText = curWord.substring(0,i-1);
-            await sleep(sleepTime);
-        }
-
-        await sleep(sleepTime * 5);
-
-        if (curPhraseIndex === phrases.length-1) {
-            curPhraseIndex =0;
-        }else {
-            curPhraseIndex++;
-        }
-     }
-
-    };
-
-    writeLoop();
-
-            </script>
-                     
             </div>
 
+         </div>
+
+      </div> 
+
+      </div>
+
+      
+      <div class="contactpage">
+         <p class="contactpagetitle">Contact</p><br>
+
+         <div class="contactpagecontents">
+
+            <div class="contactpagecontentsdetails">
+
+               <div class="contactpagename">
+                  J O H N  &nbspP A T R I C K <span style="font-weight: 1000;">&nbsp P A H U N A N G</span>
+               </div>
+
+               <div class="contactinfo">
+                  <div class="contactinfo1">
+                     <span><i class="fa-solid fa-phone"></i></span> <p>0935 451 7426</p>
+
+                  </div>
+                  <div class="contactinfo1">
+                     <span><i class="fa-solid fa-envelope"></i></span> <p>patrickpahunang452@gmail.com</p>
+
+                  </div>
+               </div>
+
+               <div class="workexp">
+                 <p style=" font-weight: 100; margin-bottom: 1vh;" > Work Experience</p>
+                 <p style=" font-weight: 800;"> Company IJK</p>
+
+                 <p style="font-size: clamp(.6rem,2vw,1rem);"> Modular Quality Assurance</p>
+                 <p style="font-size: clamp(.6rem,2vw,1rem);"> 2020 - 2022</p>
 
 
+               </div>
+               
 
-            <div class="displaypicture">
-                <img src="img/DP.png">
+               <div class="socials">
+                  <div class="socialtitle">
+                     <p>Socials</p>
+                  </div>
+                  <div class="socialicons">
+                     <a href="https://www.facebook.com/patrick.pahunang" target="_blank"><span><i class="fa-brands fa-facebook"></i></span></a>
+                     <a href="https://twitter.com/patrickpahunang" target="_blank"><span><i class="fa-brands fa-twitter"></i></span></a>
+                     <a href="https://www.linkedin.com/in/john-patrick-pahunang-942044259/" target="_blank"><span><i class="fa-brands fa-linkedin"></i></span></a>
+                     <a href="https://github.com/patrickpahunang" target="_blank"><span><i class="fa-brands fa-github"></i></span></a>
+
+                  </div>
+
+               </div>
+
             </div>
 
-        </div>
+            <div class="contactpagecontentsimg">
+
+            </div>
+            
+
+       
+
+         </div>
+
+      </div>
+
+      <div class="projectpage">
 
 
+         <div class="projectpagetitle">
+            Projects
 
+         </div>
+         <div class="projectpagesubtitle">
+            Capstone Project
 
+         </div>
+         <div class="projectpagecardcontainer">
+            
+            <div class="projectpagecards">
+           <img src="img/face recog.png" alt="facerecogimg">
 
-     
+            </div>
 
-    </div>
-
-    <div class="canvas">
-      <canvas></canvas>
-
-    </div>
+            <div class="projectpagecards">
+               <img src="img/projimg1.png" alt="projimg1">
     
+            </div>
 
+            <div class="projectpagecards">
+               <img src="img/projimg2.png" alt="projimg2">
+    
+            </div>
+            <div class="projectpagecards">
+               <img src="img/projimg3.png" alt="projimg3">
+    
+            </div>
+            <div class="projectpagecards">
+               <img src="img/projimg4.png" alt="projimg4">
+    
+            </div>
+         </div>
 
-
-
-
+      </div>
+	</div>
+ 
 </body>
 </html>
