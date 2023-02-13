@@ -124,7 +124,7 @@ a {
    justify-content: center;
    align-items: center;
    z-index: -1;
-   background-size: contain;
+
    
   
 
@@ -138,8 +138,6 @@ a {
    -o-filter: blur(30px);
     filter: blur(30px);
     position: absolute;
- 
-
 }
 
 
