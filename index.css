@@ -349,6 +349,7 @@ a {
    transition: 1s;
    height: 95vh;
    width: 60%;
+   right: 20%;
    background-color: rgb(21, 28, 53);
    z-index: 1;
    margin-left: 35%;
@@ -375,10 +376,10 @@ a {
 
 
 .aboutpagetitle1 {
-   width: 70%;
+   width: 90%;
    height: 300px;
    margin-top: 1vh;
-   padding-left: 2vw;
+   padding-left: 9vw;
    text-align: justify;
    margin-bottom: 20px;
    font-size: clamp(1rem,2vw,1.3rem);
@@ -395,7 +396,6 @@ a {
 .aboutpagetitle2 {
    width: 65%;
    height: auto;
-
    margin-top: -100px;
    display: flex;
    justify-content: center;
@@ -409,6 +409,7 @@ a {
 .aboutpagetitle2contents {
    display: flex;
    margin-top: 20px;
+   margin-left: 1vw;
 
  
 }
@@ -876,6 +877,9 @@ font-size: 25px;
 
 
 
+
+
+
 .contactpagecontents {
    width: 80%;
    height:90vh;
@@ -888,6 +892,10 @@ font-size: 25px;
 
 }
 
+.contactpagename {
+   margin-left: -100px;
+   letter-spacing: 1;
+}
 
 .contactpagecontentsdetails {
    width: 100%;
