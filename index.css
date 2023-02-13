@@ -293,7 +293,7 @@ a {
 }
 
 .aboutpagecontainer {
-   background: url("/img/landingpage.jpg");
+   background: url("img/landingpage.jpg");
    display: flex;
    transition: 1s;
    justify-content: center;
@@ -322,7 +322,7 @@ a {
    transition: 1s;
    height: 70vh;
    width: 35%;
-   background: url("/img/aboutpageimg.png");
+   background: url("img/aboutpageimg.png");
    background-repeat: no-repeat;
    background-color: rgb(13, 14, 17);
    background-size: cover;
@@ -449,7 +449,7 @@ transition: 1s;
 
 width: 100%;
 height: 100vh;
-background: url("/img/landingpage.jpg");
+background: url("img/landingpage.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
@@ -502,7 +502,7 @@ flex-direction: column;
 .contactpagecontentsimg {
    width: 45%;
    height: 70vh;
-   background: url("/img/contactpageimg.jpg");
+   background: url("img/contactpageimg.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    border-radius: 0px 10px 10px 0px ;
@@ -674,7 +674,7 @@ flex-direction: column;
 
 width: 100%;
 height: 100vh;
-background: url("/img/projectbackground.jpg");
+background: url("img/projectbackground.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
