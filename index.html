@@ -16,7 +16,7 @@
       setTimeout(function () {
       document.getElementById("loadpage").style.display = "none";
       document.getElementById("container").style.display = "flex";
-   },3000);  /*change this to 2000 to display the loader after the development*/
+   },1);  /*change this to 2000 to display the loader after the development*/
    
    </script>
   
@@ -73,14 +73,15 @@
             window.onscroll = function() {
               const div = document.querySelector("#aboutpageimage");
               if (window.pageYOffset > 100) {
-               div.style.marginLeft = "3vw";
+               div.style.marginLeft = "20vw";
+               div.style.marginRight = "48vw";
               } else {
-               div.style.marginLeft = "0";
+               div.style.marginLeft = "none";
               }
 
               const div2 = document.querySelector("#aboutpagedetails");
               if (window.pageYOffset > 100) {
-               div2.style.marginRight = "0";
+               div2.style.marginRight = "-20%";
               } else {
                div2.style.marginRight = "0";
               }
