@@ -136,7 +136,7 @@ a {
    justify-content: center;
    align-items: center;
    object-fit: fill;
-
+   z-index: 1;
    -o-filter: blur(30px);
     filter: blur(30px);
  
