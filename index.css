@@ -236,7 +236,7 @@ a {
 
 .buttondown span {
    animation: angledoubledown 1s infinite;
-   z-index: 999;
+   z-index: 10000;
 }
 
 
@@ -834,7 +834,7 @@ border-top:300px;
    justify-content: center;
    position: absolute;
    margin-bottom:-40vh;
-
+   border-radius: 0px 0px 0px 0px;
 
 
 }
