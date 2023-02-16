@@ -7,6 +7,7 @@
    <link rel="icon" href="img/FINALLOGO.png" type="image/icon type" style="object-fit:cover">
    <link rel="stylesheet" href="fa/css/all.css">
    <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<title>John Patrick Pahunang</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
       setTimeout(function () {
       document.getElementById("loadpage").style.display = "none";
       document.getElementById("container").style.display = "flex";
-   },3000);  /*change this to 2000 to display the loader after the development*/
+   },10);  /*change this to 2000 to display the loader after the development*/
    
    </script>
   
@@ -24,8 +25,9 @@
    <p>PORTFOLIO<br>
    </p>
   </div>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
 	<div class="container"  id="container" >
@@ -85,15 +87,6 @@
               } else {
                div2.style.marginRight = "0";
               }
-         
-
-             const div3 = document.querySelector("#contactpagecontents");
-               if (window.pageYOffset > 100) {
-                div3.style.marginTop = "0px";
-               } else {
-                div3.style.marginTop = "0px";
-               }
-               
             
           
               
@@ -134,12 +127,11 @@
 
       </div>
 
-
-      
+  
       <div class="contactpage">
          <p class="contactpagetitle">Contact</p><br>
 
-         <div class="contactpagecontents" id="contactpagecontents">
+         <div class="contactpagecontents aos-init aos-animate" id="contactpagecontents" data-aos="fade-left" data-aos-duration="2000">
 
             <div class="contactpagecontentsdetails">
 
@@ -235,6 +227,10 @@
 
       </div> 
 	</div>
- 
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
+
 </body>
 </html>

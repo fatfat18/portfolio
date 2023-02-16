@@ -1,296 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JPPahunang</title>
-
-
-
-<style>
-
-html{line-height:1.15;-webkit-text-size-adjust:100%}
-  body{margin:0}
-  a{background-color:transparent}[hidden]
-  {display:none}
-  html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}
-  
-
-
-
-
-
-  /* .spinner {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 56px;
-   height: 56px;
-   display: none;
-   align-items: center;
-   justify-content: center;
-   scale: 2;
-
-}
-
-.spinner::before,
-.spinner::after {
-   border: 6.7px solid #10132c;
-   border-radius: 50%;
-   position: absolute;
-   content: '';
-   display: block;
-}
-
-.spinner::before {
-   width: 33.6px;
-   height: 33.6px;
-   border-bottom-color: transparent;
-   border-left-color: transparent;
-   animation: spinner-1o3y8q 0.75s infinite linear reverse;
-}
-
-.spinner::after {
-   animation: spinner-1o3y8q 0.5s infinite linear;
-   height: 56px;
-   width: 56px;
-   border-right-color: transparent;
-   border-top-color: transparent;
-}
-
-
-
-
-@keyframes spinner-1o3y8q {
-   to {
-      transform: rotate(360deg);
-   }
-}
-*/
-
-@keyframes loadmaincontent {
-   0% {
-     opacity: 0;
-   }
-   100% {
-      opacity: 1;
-   }
-} 
-
-
-
-
-
-
-.container{
-   background-color:rgb(255, 255, 255);
-   width: 100%; 
-   height: auto; 
-   color: white; 
-   display: flex;
-   flex-direction: column;
-   justify-content: center; 
-   align-items: center; 
-   z-index: 100;
-
-
-}
-
-/* 
-.sample {
-   width: 100px;
-   height: 100px;
-   background-color: rebeccapurple;
-   display: hidden;
-   justify-content: center;
-   align-items: center;
-   animation: smpl 1s infinite ;
-} */
-
-
-@keyframes smpl {
- 0% {
-      transform: translateY(0px);
-   }
-  50% {
-      transform: translateY(30px);
-   }
-
-   100% {
-      transform: translateY(0px);
-   }
-
-
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-/* .loadpage {
-   width: 100%;
-   height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000;
-} */
-
-
-a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 24px;
-}
-/* 
-p {
-  font-weight: 700;
-  text-align: center;
-  font-size: 40px;
-  font-family: Hack, sans-serif;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  letter-spacing: 5px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: shine 3s linear infinite;
-  position: relative;
-} */
-
-@keyframes shine {
-  0% {
-    background-position-x: -500%;
-  }
-  100% {
-    background-position-x: 500%;
-  }
-
-
-}
-
-
-.contents1 {
-   background-color: bisque;
-   height: 100vh;
-   width: 100%;
-}
-
-
-.contents2 {
-   
-   background-color: rgb(94, 8, 97);
-   height: 100vh;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-
-}
-
-.c2 { 
-   width: 200px;
-   height: 200px;
-   background-color: aqua;
-   display: flex;
-   margin-left: 800px;
-   justify-content: center;
-   align-items: center;
-   transition: 1.5s;
-
-}
-
-
-
-.contents3 {
-   background-color: rgb(25, 31, 126);
-   height: 100vh;
-   width: 100%;
-}
-
-
-.contents4 {
-   background-color: rgb(80, 48, 9);
-   height: 100vh;
-   width: 100%;
-}
-
-
-
-</style>
-
-
-</head>
-<body>
-	
-   <!-- <script>
-      setTimeout(function () {
-      document.getElementById("loadpage").style.display = "flex";
-      document.getElementById("container").style.display = "none";
-   });  
-   
-   </script> -->
-
-
-
- <div class="loadpage" id="loadpage">
-   <!-- <p>PORTFOLIO<br>
-   </p> -->
-  </div>
-
-
-
-  <script>
-window.onscroll = function() {
-  const div = document.querySelector("#c2");
-  if (window.pageYOffset > 100) {
-    div.style.marginLeft = "-70%";
-  } else {
-    div.style.marginLeft = "-15%";
-  }
-};
-  </script>
-
-	<div class="container"  id="container" >
-
-      <div class="contents1">
-
-      </div>
-      <div class="contents2">
-
-         <div class="c2" id="c2">
-            test
-
-         </div>
-
-      </div>
-      <div class="contents3">
-
-      </div>
-      <div class="contents4">
-
-      </div>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Parallax Effect | Pure CSS</title>
       
 
-	</div>
-<!-- 
-   <script>
-      setTimeout(function () {
-      document.getElementById("loadpage").style.display = "none";
-      document.getElementById("container").style.display = "flex";
-      document.getElementById("container").style.flexDirection = "row";
-   }, 1);  
-   
-   </script> -->
-</body>
+        <style>
+         html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header,
+header::before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url("img/backgg.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    background: black;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: grey;
+    height: 110vh;
+}
+        </style>
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+                nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+                Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+                vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+                voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+                voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+                perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+                aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+                nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum perferendis error
+                debitis deleniti obcaecati nisi dignissimos doloribus omnis incidunt neque.
+                Aspernatur, odit. Natus, porro adipisci corporis perspiciatis aspernatur illum
+                repellendus vitae explicabo, ex reiciendis molestiae id dicta quos repudiandae at.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+                nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+                Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+                vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+                voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+                voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+                perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+                aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+                nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum perferendis error
+                debitis deleniti obcaecati nisi dignissimos doloribus omnis incidunt neque.
+                Aspernatur, odit. Natus, porro adipisci corporis perspiciatis aspernatur illum
+                repellendus vitae explicabo, ex reiciendis molestiae id dicta quos repudiandae at.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+                nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+                Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+                vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+                voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+                voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+                perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+                aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+                nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum perferendis error
+                debitis deleniti obcaecati nisi dignissimos doloribus omnis incidunt neque.
+                Aspernatur, odit. Natus, porro adipisci corporis perspiciatis aspernatur illum
+                repellendus vitae explicabo, ex reiciendis molestiae id dicta quos repudiandae at.
+            </p>
+        </div>
+        <header>
+            <h1>Parallax Effect</h1>
+        </header>
+    </body>
 </html>
